@@ -1,35 +1,22 @@
----
-layout: default
----
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {% assign m = page.date | date: "%-m" %}
-        {% case m %}
-          {% when '1' %}January
-          {% when '2' %}February
-          {% when '3' %}March
-          {% when '4' %}April
-          {% when '5' %}May
-          {% when '6' %}June
-          {% when '7' %}July
-          {% when '8' %}August
-          {% when '9' %}September
-          {% when '10' %}October
-          {% when '11' %}November
-          {% when '12' %}December
-        {% endcase %}
-        {{ page.date | date: "%-d, %Y" }}
-      </time>
-      {% if page.author %}
-        • {{ page.author }}
-      {% endif %}
-    </p>
-  </header>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/about' | relative_url }}">About</a></li>
+            <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+            <li><a href="{{ '/resume' | relative_url }}">Resume</a></li>
+            <li><a href="{{ '/contact' | relative_url }}">Contacts</a></li>
+        </ul>
+    </nav>
 
-  <div class="post-content">
     {{ content }}
-  </div>
-</article>
+</body>
+</html>
