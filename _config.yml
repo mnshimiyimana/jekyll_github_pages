@@ -7,7 +7,7 @@ baseurl: "/jekyll_github_pages" # This should match the repository name
 url: "https://mnshimiyimana.github.io" # This should be the base URL without the repository name
 
 # Build settings
-theme: jekyll-theme-cayman-blog
+theme: jekyll-minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
